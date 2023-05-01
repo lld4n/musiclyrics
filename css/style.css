@@ -650,8 +650,10 @@ body {
 }
 
 .main__title {
+  text-align: center;
+  max-width: 1000px;
   font-weight: 800;
-  font-size: 128px;
+  font-size: 100px;
   color: #fff;
 }
 
