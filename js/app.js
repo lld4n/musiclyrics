@@ -1,0 +1,1 @@
+(()=>{"use strict";!function(e){let A=new Image;A.onload=A.onerror=function(){!0===(2===A.height)?document.querySelector("body").classList.add("webp"):document.querySelector("body").classList.add("no-webp")},A.src="data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA"}()})();
