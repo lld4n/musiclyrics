@@ -1,0 +1,250 @@
+@import 'modules/reset';
+@import 'modules/vars';
+@import 'modules/global';
+@import 'modules/header';
+@import 'modules/footer';
+@import 'modules/info';
+
+.track {
+  &__content {
+    margin-top: 600px;
+  }
+}
+
+.main {
+  background: $bg;
+}
+
+.track {
+  background: $white;
+
+  &__name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    width: 100%;
+    font-weight: 800;
+    font-size: 48px;
+    color: $white;
+    background: $bg;
+  }
+
+  &__container {
+    max-width: 1256px;
+    padding: 20px 20px 30px;
+    margin: 0 auto;
+  }
+
+  &__text-content {
+    font-weight: 400;
+    font-size: 24px;
+    color: $black;
+    line-height: 130%;
+
+    p {
+      cursor: default;
+      color: $black;
+    }
+
+    a {
+      pointer-events: none;
+      cursor: default;
+      color: $black;
+    }
+  }
+
+  &__about-content {
+    iframe {
+      max-width: 700px !important;
+      width: 100% !important;
+    }
+
+    img {
+      max-width: 700px !important;
+      width: 100% !important;
+      height: auto !important;
+    }
+    blockquote {
+      margin-left: 20px;
+    }
+    p {
+      cursor: default;
+      color: $black;
+      margin-bottom: 10px;
+    }
+
+    a {
+      pointer-events: none;
+      cursor: default;
+      color: $black;
+    }
+
+    max-width: 700px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 130%;
+    color: $black;
+  }
+
+  &__album-title {
+    display: inline-block;
+    width: 100%;
+    line-height: 120%;
+    font-weight: 700;
+    font-size: 48px;
+    color: $primary;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__album-content {
+    display: flex;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  &__album-item-box {
+    font-family: 'Montserrat', serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: $bg;
+    max-width: 600px;
+    width: 100%;
+    border: 1px solid $bg;
+    border-radius: 10px;
+
+    &:hover {
+      .track__album-item {
+        border: 1px solid $bg;
+      }
+    }
+
+    &--active {
+      .track__album-item {
+        border: 1px solid $bg;
+      }
+    }
+  }
+
+  &__album-item {
+    display: flex;
+    gap: 5px;
+    line-height: 110%;
+    transition: all 0.5s;
+    padding: 20px;
+    border-radius: 9px;
+    height: 100%;
+    border: 1px solid transparent;
+  }
+
+  &__credits-written {
+    width: 100%;
+    padding: 10px;
+    font-family: 'Montserrat', serif;
+    font-size: 20px;
+    color: $bg;
+    font-weight: 500;
+    border: 1px solid $bg;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    line-height: 110%;
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  &__credits-content-box {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 20px;
+  }
+
+  &__credits-item {
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+    display: flex;
+    border: 1px solid #2f2b5b;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    font-family: 'Montserrat', serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: $bg;
+    line-height: 110%;
+  }
+
+  &__credits-item-object {
+    flex: 1;
+    text-align: right;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 1200px) {
+  .track {
+    &__credits-written {
+      width: 100%;
+      max-width: 600px;
+    }
+
+    &__name {
+      font-size: 32px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .track {
+    &__container {
+      padding: 10px 10px 20px 10px;
+    }
+
+    &__name {
+      padding: 5px 0;
+      font-size: 26px;
+    }
+
+    &__text-content {
+      font-size: 20px;
+      line-height: 150%;
+    }
+
+    &__about-content {
+      font-size: 20px;
+    }
+
+    &__album-title {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    &__credits-written {
+      margin-bottom: 10px;
+    }
+
+    &__credits-content-box {
+      gap: 10px;
+    }
+
+    &__album-item-box {
+      font-size: 16px;
+    }
+
+    &__credits-written {
+      font-size: 16px;
+    }
+
+    &__credits-item {
+      font-size: 16px;
+    }
+  }
+}

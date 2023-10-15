@@ -1,0 +1,357 @@
+
+.header {
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  height: 100px;
+  background-color: $bg;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__container {
+    width: 100%;
+    margin: 0 136px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  &__label {
+    border: 2px solid $additional;
+    border-radius: 10px;
+    padding: 13px 10px;
+    width: 350px;
+    display: flex;
+  }
+
+  &__input {
+    background-color: transparent;
+    font-weight: 400;
+    font-size: 20px;
+    padding-right: 10px;
+    flex: 1;
+    color: $white;
+
+    ::placeholder {
+      font-weight: 400;
+      font-size: 20px;
+      color: $additional;
+
+    }
+
+  }
+
+  &__btn {
+    background-color: transparent;
+
+    path {
+      transition: all .5s;
+
+    }
+
+    &:hover {
+      path {
+
+        fill: $white;
+      }
+    }
+  }
+
+
+  &__link {
+    font-size: 24px;
+    color: $white;
+    position: relative;
+
+    &:before {
+      content: '';
+      height: 3px;
+      width: 0;
+      background: #3EC0AD;
+      border-radius: 4px;
+      position: absolute;
+      bottom: -2px;
+      transition: all .5s;
+    }
+
+    &:hover:before {
+      width: 100%;
+    }
+
+  }
+
+  &__language {
+    position: relative;
+    width: 140px;
+    z-index: 2;
+  }
+
+  &__box {
+    display: none;
+    position: absolute;
+    margin-top: 5px;
+    background-color: $primary;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px;
+    left: 0;
+    gap: 20px;
+    color: $white;
+
+  }
+
+  &__choice {
+    position: relative;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      height: 3px;
+      background-color: $secondary;
+      border-radius: 1px;
+      position: absolute;
+      width: 0;
+      bottom: -7px;
+      transition: all .5s;
+    }
+  }
+
+  &__choice--selected:before {
+
+    width: 100%;
+  }
+
+  &__choice--selected {
+    cursor: default;
+  }
+
+  &__choice:hover:before {
+    width: 100%;
+  }
+
+  &__box--open {
+    display: flex;
+  }
+
+  &__selected {
+    font-weight: 500;
+    font-size: 24px;
+    color: $white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all .5s;
+
+    svg {
+
+      transition: all .5s;
+    }
+
+    path {
+      transition: all .5s;
+
+    }
+
+    &:hover {
+      color: $primary;
+
+      path {
+        fill: $primary;
+
+      }
+    }
+  }
+
+  &__burger {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  &__burger span {
+    width: 24px;
+    height: 2px;
+    position: absolute;
+    top: 1px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $white;
+    transition: all 0.5s;
+    border-radius: 1px;
+  }
+
+  &__burger span:nth-of-type(2) {
+    top: calc(50% - 1px);
+  }
+
+  &__burger span:nth-of-type(3) {
+    bottom: 0;
+    top: auto;
+  }
+
+  &__burger.active span:nth-of-type(1) {
+    display: none;
+  }
+
+  &__burger.active span:nth-of-type(2) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(45deg);
+  }
+
+  &__burger.active span:nth-of-type(3) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(-45deg);
+  }
+
+  &__menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 100px;
+    background: $bg;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 40px;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+    z-index: 2;
+  }
+
+  &__menu.active {
+    transform: translateX(0);
+  }
+
+  &__menu-language {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-weight: 500;
+    font-size: 20px;
+    color: $white;
+  }
+
+  &__menu-choice {
+    cursor: pointer;
+  }
+
+  &__menu-choice--selected {
+    color: $primary;
+    cursor: default;
+  }
+
+  &__menu-link {
+    font-weight: 500;
+    font-size: 20px;
+    color: $white;
+  }
+
+  &__burger {
+    display: none;
+  }
+}
+
+@media (max-width: 1100px) {
+  .header {
+    &__container {
+      margin: 0 30px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    &__burger {
+      display: block;
+    }
+
+    &__link {
+      display: none;
+    }
+
+    &__language {
+      display: none;
+    }
+
+    &__menu {
+      display: flex;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    height: 60px;
+
+    &__label {
+      border: 1px solid $additional;
+      border-radius: 5px;
+      padding: 10px;
+      width: auto;
+    }
+
+    &__input {
+      font-size: 14px;
+      padding-right: 0;
+
+      ::placeholder {
+        font-size: 14px;
+
+      }
+
+    }
+
+    &__label {
+      flex: 1;
+    }
+
+    &__btn {
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    &__container {
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    &__burger {
+      width: 21px;
+      height: 21px;
+    }
+
+    &__menu {
+      padding: 50px;
+    }
+
+    &__burger span {
+      width: 21px;
+    }
+
+    &__burger span:nth-of-type(2) {
+      top: 50%;
+    }
+  }
+
+
+}
+
+@media (max-width: 400px) {
+  .header {
+    &__container {
+      margin: 0 15px;
+    }
+  }
+}

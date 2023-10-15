@@ -1,0 +1,208 @@
+@import "modules/reset";
+@import "modules/vars";
+@import "modules/global";
+@import "modules/header";
+@import "modules/footer";
+@import "modules/info";
+
+.main {
+  background: $bg;
+}
+
+.artist {
+  background: $white;
+
+  &__content {
+    margin-top: 600px;
+  }
+
+}
+
+
+.artist {
+  &__name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    width: 100%;
+    font-weight: 800;
+    font-size: 48px;
+    color: $white;
+    background: $bg;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1256px;
+    padding: 20px 20px 30px;
+    margin: 0 auto;
+  }
+
+  &__btn {
+    background: transparent;
+    transition: all .5s;
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 20px;
+    border: 2px solid $primary;
+    border-radius: 10px;
+    color: $primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      background: $primary;
+      color: $white;
+    }
+  }
+  &__albums-content {
+    width: 100%;
+  }
+  &__about-content {
+    max-width: 700px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 130%;
+    color: $black;
+  }
+  &__tracks-content {
+    max-width: 1216px;
+    width: 100%;
+  }
+  &__about {
+    .artist__container {
+      align-items: flex-start;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .artist {
+
+    &__name {
+      font-size: 32px;
+    }
+  }
+
+}
+
+@media (max-width: 600px) {
+  .artist {
+    &__about-content {
+      font-size: 20px;
+    }
+
+    &__btn {
+      margin-top: 10px;
+      font-size: 16px;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    &__container {
+      padding: 10px 10px 20px 10px;
+    }
+
+    &__name {
+      padding: 5px 0;
+      font-size: 26px;
+    }
+
+    &__text-content {
+      font-size: 20px;
+      line-height: 150%;
+    }
+
+  }
+}
+
+.result {
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__item {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    background: $gray;
+    border: 1px solid #2F2B5B;
+    border-radius: 10px;
+    align-items: center;
+    min-height: 120px;
+
+    &:hover {
+      .result__item-image {
+        width: 118px;
+        height: 118px;
+        left: 0;
+      }
+
+      .result__item-image-user {
+        border-radius: 9px;
+      }
+
+    }
+  }
+
+  &__item-image {
+    left: 10px;
+    position: absolute;
+    transition: all .5s ease;
+    width: 100px;
+    height: 100px;
+    border-radius: 9px;
+  }
+
+  &__item-image-user {
+    border-radius: 50%;
+  }
+
+  &__item-info {
+    padding: 10px 0;
+    flex: 1;
+    margin-left: 126px;
+
+  }
+
+  &__item-title {
+    font-family: 'Montserrat', serif;
+    color: $bg;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  &__item-artist {
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: $bg;
+  }
+}
+
+@media (max-width: 1000px) {
+  .result {
+    &__item {
+      &:hover {
+        .result__item-image {
+          width: 100px;
+          height: 100px;
+          left: 10px;
+        }
+
+      }
+    }
+  }
+}

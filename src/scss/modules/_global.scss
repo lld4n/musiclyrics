@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400%3B500%3B700%3B800&family=Rubik:wght@400%3B500%3B600%3B700%3B800&display=swap');
+
+body {
+  font-family: 'Rubik', sans-serif;
+  font-size: 24px;
+}
+
+html,
+body {
+  background-color: $bg;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  margin-top: 100px;
+  flex-grow: 1;
+}
+
+.logo {
+  overflow: hidden;
+  font-weight: 700;
+  font-size: 32px;
+  color: $white;
+
+  &__decor {
+    color: $primary;
+  }
+}
+
+@media (max-width: 1100px) {
+  .logo {
+    width: auto !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .like {
+    width: 25px;
+    height: 23px;
+  }
+  .main {
+    margin-top: 60px;
+  }
+  .logo {
+    font-size: 24px;
+  }
+}
+
+.like {
+  cursor: pointer;
+
+  path {
+    transition: all 0.5s;
+  }
+
+  &:hover {
+    path {
+      stroke: $secondary;
+    }
+  }
+}
+
+.like--active {
+  path {
+    stroke: $secondary;
+    fill: $secondary;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: #1b183d;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $primary;
+  border-radius: 9em;
+}
+
+.load {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  background: $bg;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  div {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    animation-name: rotateDiv;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+  }
+
+  div:nth-child(1) {
+    background: $primary;
+    animation-duration: 1.8s;
+  }
+
+  div:nth-child(2) {
+    background: $secondary;
+    animation-delay: 100ms;
+    animation-duration: 2s;
+  }
+
+  div:nth-child(3) {
+    background: #ffe562;
+    animation-duration: 2.2s;
+  }
+}
+
+@keyframes rotateDiv {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

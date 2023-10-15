@@ -1,0 +1,134 @@
+@import 'modules/reset';
+@import 'modules/vars';
+@import 'modules/global';
+@import 'modules/header';
+@import 'modules/footer';
+html,
+body {
+  background-color: white;
+}
+.liked {
+  &__title {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: 800;
+    font-size: 48px;
+    color: $white;
+    background: $bg;
+  }
+
+  &__content {
+    padding: 40px 20px;
+    max-width: 1256px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    gap: 38px;
+    flex-wrap: wrap;
+  }
+}
+
+.card {
+  padding: 10px;
+  border: 1px solid $bg;
+  border-radius: 10px;
+  position: relative;
+  max-width: 380px;
+  width: 100%;
+
+  &:hover {
+    .card__img {
+      top: 0;
+      left: 0;
+      width: 378px;
+      border-radius: 9px;
+    }
+  }
+
+  &__img {
+    top: 10px;
+    left: 10px;
+    transition: all 0.5s;
+    position: absolute;
+    width: 358px;
+    border-radius: 9px;
+  }
+
+  &__img-artist {
+    border-radius: 50%;
+  }
+
+  &__info {
+    word-wrap: anywhere;
+    max-width: 380px;
+    width: 100%;
+    margin-top: 380px;
+    display: flex;
+    gap: 10px;
+    font-family: 'Montserrat', serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: $bg;
+    justify-content: space-between;
+  }
+
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .liked {
+    &__content {
+      justify-content: center;
+      padding: 20px 10px;
+    }
+
+    &__title {
+      padding: 5px 0;
+      font-weight: 800;
+      font-size: 24px;
+    }
+  }
+  .card {
+    &:hover {
+      .card__img {
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+
+      .card__img-artist {
+        border-radius: 50%;
+      }
+    }
+
+    &__img {
+      top: 0;
+      left: 0;
+      position: relative;
+      max-width: 358px;
+      width: 100%;
+    }
+
+    &__info {
+      margin-top: 20px;
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+
+    &__artist {
+      font-size: 14px;
+    }
+  }
+}

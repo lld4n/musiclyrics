@@ -1,0 +1,242 @@
+.info {
+  z-index: 2;
+  padding: 20px;
+  gap: 40px;
+  transition: all 10ms;
+  top: 100px;
+  width: 100%;
+  position: fixed;
+  height: 600px;
+  background: $bg;
+  display: flex;
+
+  &__img {
+    transition: all 10ms;
+    width: 560px;
+    height: 560px;
+    border-radius: 20px;
+  }
+
+  &__content {
+    transition: all 10ms;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__box {
+    transition: all 10ms;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+
+  }
+
+  &__block {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-family: 'Montserrat', serif;
+    font-weight: 800;
+    font-size: 30px;
+    color: $white;
+
+  }
+
+
+  &__artist {
+    max-width: 800px;
+    font-family: 'Montserrat', serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: $white;
+    transition: all .5s;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &__producer-box {
+    transition: all 10ms;
+    font-family: 'Montserrat', serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: $white;
+    line-height: 120%;
+  }
+
+  &__producer {
+    font-weight: 700;
+    transition: all .5s;
+    color: $white;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &__feat-box {
+    line-height: 120%;
+    transition: all 10ms;
+    font-family: 'Montserrat', serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: $white;
+  }
+
+  &__feat {
+    font-weight: 700;
+    transition: all .5s;
+    color: $white;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &__additional {
+    transition: all 10ms;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  &__date {
+    font-family: 'Montserrat', serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: $white;
+  }
+
+  &__socials {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__socials-item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__socials-item-text {
+    transition: all 10ms;
+    text-transform: uppercase;
+    padding: 0 10px;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  &__socials-item-img {
+    width: 28px;
+    height: 28px;
+    border-radius: 5px;
+  }
+
+  &__socials-item {
+    border-radius: 5px;
+    border: 2px solid $bg;
+    transition: all .5s;
+    color: #000;
+
+    &:hover {
+      border: 2px solid $white;
+    }
+  }
+
+  &__socials-item-genius {
+    background: #FFFF7D;
+  }
+
+  &__socials-item-spotify {
+    background: #1ED760;
+  }
+
+  &__socials-item-youtube {
+    background: #FE0000;
+  }
+
+  &__socials-item-soundcloud {
+    background: #FF7000;
+  }
+}
+
+@media (max-width: 1200px) {
+  .info {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+
+    &__content {
+      gap: 30px;
+    }
+
+    &__box {
+      gap: 20px;
+    }
+  }
+
+}
+
+@media (max-width: 600px) {
+  .info {
+    padding: 10px;
+    gap: 20px;
+
+    &__content {
+      gap: 10px;
+    }
+
+    &__img {
+      height: auto;
+      width: 100%;
+    }
+
+    &__socials {
+      flex-wrap: wrap;
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+
+    &__artist {
+      font-size: 20px;
+    }
+
+    &__producer-box {
+      font-size: 16px;
+    }
+
+    &__feat-box {
+      font-size: 16px;
+    }
+
+    &__date {
+      font-size: 16px;
+    }
+
+    &__socials-item-img {
+      width: 18px;
+      height: 18px;
+    }
+
+    &__socials-item-text {
+      padding: 0 5px;
+      font-size: 12px;
+    }
+
+    &__socials {
+      gap: 5px;
+    }
+
+    &__box {
+      gap: 10px;
+    }
+
+    &__additional {
+      gap: 10px;
+    }
+  }
+}
