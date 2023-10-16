@@ -3,7 +3,7 @@
   padding: 20px;
   gap: 40px;
   transition: all 10ms;
-  top: 100px;
+  top: 70px;
   width: 100%;
   position: fixed;
   height: 600px;
@@ -30,7 +30,6 @@
     display: flex;
     gap: 30px;
     flex-direction: column;
-
   }
 
   &__block {
@@ -41,9 +40,7 @@
     font-weight: 800;
     font-size: 30px;
     color: $white;
-
   }
-
 
   &__artist {
     max-width: 800px;
@@ -51,7 +48,7 @@
     font-weight: 500;
     font-size: 24px;
     color: $white;
-    transition: all .5s;
+    transition: all 0.5s;
 
     &:hover {
       color: $primary;
@@ -69,7 +66,7 @@
 
   &__producer {
     font-weight: 700;
-    transition: all .5s;
+    transition: all 0.5s;
     color: $white;
 
     &:hover {
@@ -88,7 +85,7 @@
 
   &__feat {
     font-weight: 700;
-    transition: all .5s;
+    transition: all 0.5s;
     color: $white;
 
     &:hover {
@@ -137,7 +134,7 @@
   &__socials-item {
     border-radius: 5px;
     border: 2px solid $bg;
-    transition: all .5s;
+    transition: all 0.5s;
     color: #000;
 
     &:hover {
@@ -146,19 +143,19 @@
   }
 
   &__socials-item-genius {
-    background: #FFFF7D;
+    background: #ffff7d;
   }
 
   &__socials-item-spotify {
-    background: #1ED760;
+    background: #1ed760;
   }
 
   &__socials-item-youtube {
-    background: #FE0000;
+    background: #fe0000;
   }
 
   &__socials-item-soundcloud {
-    background: #FF7000;
+    background: #ff7000;
   }
 }
 
@@ -176,7 +173,6 @@
       gap: 20px;
     }
   }
-
 }
 
 @media (max-width: 600px) {
