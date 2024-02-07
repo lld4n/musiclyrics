@@ -1,7 +1,7 @@
 <h1 align="center">Поиск текста песни</h1>
 
 <div align="center"><a href="https://musiclyrics.lldan.ru">musiclyrics.lldan.ru</a></div>
-
+<br>
 <img align="center" src="https://i.ibb.co/3mL4Bst/musiclyrics.png">
 
 <h3 align="center">Описание</h3>
